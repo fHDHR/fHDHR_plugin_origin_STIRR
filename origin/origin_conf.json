@@ -1,0 +1,50 @@
+{
+  "main":{
+          "servicename":{
+                "value": "STIRR",
+                "config_file": false,
+                "config_web": false
+                },
+          "dictpopname":{
+                      "value": "stirr",
+                      "config_file": false,
+                      "config_web": false
+                    },
+          "reponame":{
+                          "value": "fHDHR_STIRR",
+                          "config_file": false,
+                          "config_web": false
+                        }
+  },
+  "fhdhr":{
+          "friendlyname":{
+                    "value": "fHDHR-STIRR",
+                    "config_file": true,
+                    "config_web": true
+                },
+          "reporting_firmware_name":{
+                                    "value": "fHDHR_STIRR",
+                                    "config_file": true,
+                                    "config_web": true
+                                  }
+  },
+  "epg":{
+          "method":{
+                    "value": "origin",
+                    "config_file": true,
+                    "config_web": true
+                },
+          "valid_epg_methods":{
+                          "value": "None,blocks,origin",
+                          "config_file": false,
+                          "config_web": false
+                        }
+  },
+  "stirr":{
+          "force_best":{
+                          "value": false,
+                          "config_file": true,
+                          "config_web": true
+                      }
+          }
+}
