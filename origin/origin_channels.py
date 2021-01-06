@@ -50,10 +50,10 @@ class OriginChannels():
                 stirr_chan_list = chan_list_urlopn.json()
             except json.JSONDecodeError as err:
                 stirr_chan_list = None
-                self.fhdhr.logger.error("Channel Gathering Failed" % err)
+                self.fhdhr.logger.error("Channel Gathering Failed: %s" % err)
             except simplejsonerrors.JSONDecodeError as err:
                 stirr_chan_list = None
-                self.fhdhr.logger.error("Channel Gathering Failed" % err)
+                self.fhdhr.logger.error("Channel Gathering Failed: %s" % err)
 
             if stirr_chan_list:
 
