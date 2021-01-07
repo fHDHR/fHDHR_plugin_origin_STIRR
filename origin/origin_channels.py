@@ -89,14 +89,17 @@ class OriginChannels():
 
         return channel_list
 
-    def get_channel_stream(self, chandict):
+    def get_channel_stream(self, chandict, stream_args):
         chan_item_url = "%s/status/%s" % (self.base_api_url, str(chandict["origin_id"]))
         chan_item_urlopn = self.fhdhr.web.session.get(chan_item_url)
         stirr_chan_item = chan_item_urlopn.json()
         streamurl = stirr_chan_item['rss']["channel"]["item"]["link"]
         if self.fhdhr.config.dict["origin"]["force_best"]:
             streamurl = self.m3u8_beststream(streamurl)
-        return streamurl
+
+        stream_info = {"url": streamurl}
+
+        return stream_info
 
     def m3u8_beststream(self, m3u8_url):
         bestStream = None
