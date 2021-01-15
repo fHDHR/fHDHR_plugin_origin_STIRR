@@ -1,5 +1,6 @@
 import datetime
 import json
+from simplejson import errors as simplejsonerrors
 
 
 class OriginEPG():
@@ -22,6 +23,8 @@ class OriginEPG():
             try:
                 epg_json = epg_opn.json()
             except json.JSONDecodeError:
+                epg_json = None
+            except simplejsonerrors.JSONDecodeError:
                 epg_json = None
 
             if epg_json:
