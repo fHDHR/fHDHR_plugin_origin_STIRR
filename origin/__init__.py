@@ -10,14 +10,6 @@ class Plugin_OBJ():
         self.base_api_url = "https://ott-gateway-stirr.sinclairstoryline.com/api/rest/v3"
         self.base_station_url = "https://ott-stationselection.sinclairstoryline.com/stationSelectionByAllStates"
 
-    @property
-    def tuners(self):
-        return self.plugin_utils.config.dict["stirr"]["tuners"]
-
-    @property
-    def stream_method(self):
-        return self.plugin_utils.config.dict["stirr"]["stream_method"]
-
     def get_channels(self):
 
         channel_list = []
