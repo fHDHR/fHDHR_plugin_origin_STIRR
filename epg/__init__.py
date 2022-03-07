@@ -10,15 +10,15 @@ class Plugin_OBJ():
 
         self.channels = channels
 
-        self.origin = plugin_utils.origin
+        self.origin_name = plugin_utils.origin_name
 
         self.base_epg_url = "https://ott-gateway-stirr.sinclairstoryline.com/api/rest/v3/program/stirr/ott/"
 
     def update_epg(self):
         programguide = {}
 
-        for fhdhr_id in list(self.channels.list[self.plugin_utils.namespace].keys()):
-            chan_obj = self.channels.list[self.plugin_utils.namespace][fhdhr_id]
+        for fhdhr_channel_id in list(self.channels.list[self.plugin_utils.namespace].keys()):
+            chan_obj = self.channels.list[self.plugin_utils.namespace][fhdhr_channel_id]
 
             if str(chan_obj.number) not in list(programguide.keys()):
                 programguide[str(chan_obj.number)] = chan_obj.epgdict
